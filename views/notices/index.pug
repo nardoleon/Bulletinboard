@@ -1,0 +1,20 @@
+
+extends ../application.pug
+
+block content
+  .container
+    h1 New post
+    hr
+      //- post request to /new-notice in index.js file
+    form(action="/notices/" method="POST")
+      div(class="form-group")
+        label(for="notice-title") Title
+        //- name attribute adds the input to column name "title"
+        input(name="title" type="text" class="form-control" id="notice-title")
+      div(class="form-group")
+        label(for="notice-body") Body
+        //- name attribute adds the input to column name "body"
+        textarea(name="body" class="form-control" rows=5 id="notice-body")
+      div(class="form-group text-xs-right")
+        button(type="submit" class="btn btn-lg btn-success") Submit
+

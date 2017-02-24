@@ -1,0 +1,15 @@
+{
+  "name": "nycda-new-noticeshelf",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "method-override": "^2.3.7",
+    "morgan": "^1.8.1",
+    "pg": "^6.1.0",
+    "pug": "^2.0.0-beta9",
+    "sequelize": "^3.30.2"
+  }
+}

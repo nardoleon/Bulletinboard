@@ -1,0 +1,15 @@
+//- html layout
+html
+  head
+    title Bulletin board
+    //- importing bootstrap
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous")
+  body
+    nav(class="navbar navbar-light bg-faded")
+      //- go to index.js and find ('/') get request
+      a(class="navbar-brand" href="/") Add notice
+      //- go to index.js and find ('/board') get request
+      a(class="navbar-brand" style="float:right" href="/board") Bulletin board
+
+    //- render your content here from each page
+    block content

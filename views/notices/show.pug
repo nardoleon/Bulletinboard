@@ -1,0 +1,19 @@
+//- include the application.pug file
+extends ../application.pug
+
+block content
+  .container
+    .card.card-block
+      .row
+        .col-xs-12.col-md-8
+          //- gets title of the notice to display
+          h2= notice.title
+          //- gets body of the notice to display
+          h5= notice.body
+          .row
+            .col-xs-3
+              a.btn.btn-warning(href='/notices/' + notice.id +'/edit') Edit Post
+            .col-xs-6.text-xs-right
+              form(action="/notices/" + notice.id method="POST")
+                input(type='hidden', name='_method', value='DELETE')
+                button(type="submit" class="btn btn-danger btn-block" data-notice=notice.id) DELETE
